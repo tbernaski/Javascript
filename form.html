@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gerenciamento de Tarefas</title>
+    <link rel="stylesheet" href="form-style.css">
+    <script src="form.js" defer></script>
+    
+</head>
+<body>
+    <h1>Gerenciador de Tarefas:</h1>
+    <form id="tarefa">
+        <div>
+            <label for="nome-tarefa">Insira o nome da tarefa:</label>
+            <input type="text" name="nome-tarefa" id="nome-tarefa" required>
+        </div>
+        <br>
+        <div>
+            <label for="date">Data de vencimento:</label>
+            <input type="date" name="date" id="date" required>
+        </div>
+        <br>
+        <div>
+            <label for="tipo">Prioridade:</label>
+            <select name="tipo" id="tipo" required>
+                <option value="" disabled selected>Selecione</option>
+                <option value="alta">Alta</option>
+                <option value="media">Média</option>
+                <option value="baixa">Baixa</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="descricao">Descrição:</label>
+            <input type="text" name="descricao" id="descricao" required>
+        </div>
+        <br>
+        <div>
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" id="senha" required>
+        </div>
+        <br>
+        <div>
+            <button type="button" id="adicionar">Adicionar Tarefa</button>
+            <button type="button" id="remover">Remover Última Tarefa</button>
+        </div>
+    </form>
+    <br>
+
+    <div id="lista-tarefas"></div>
+    <p>Total de tarefas: <span id="contador-tarefas">0</span></p>
+    <h2>Tarefas:</h2>
+    <p id="array-tarefas"></p>
+</body>
+</html>
